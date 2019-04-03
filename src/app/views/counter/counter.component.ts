@@ -14,10 +14,15 @@ export class CounterComponent {
     this.counter = 0;
   }
 
-  decreaseCounter() {}
+  decreaseCounter() {
+    this.counter--;
+    this.counterChange.emit();
+    this.output = String(this.counter);
+  }
 
   increaseCounter() {
     this.counter++;
     this.counterChange.emit();
+    this.output = String(this.counter);
   }
 }
