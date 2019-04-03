@@ -8,6 +8,7 @@ import { MainComponent } from './views/main/main.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { HttpClientModule} from '@angular/common/http';
+
 import { HomeComponent } from './views/home/home.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
 import { CounterComponent } from './views/counter/counter.component';

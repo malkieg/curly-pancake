@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RandomJokeService} from '../../models/services/random-joke.service';
+import { RandomJokeService, Joke} from '../../models/services/random-joke.service';
 import { ActivatedRoute} from '@angular/router';
 
 
@@ -10,14 +10,14 @@ import { ActivatedRoute} from '@angular/router';
 })
 export class RandomJokeComponent implements OnInit {
   jokeUrl: string;
-  constructor(private joke: RandomJokeService, private route: ActivatedRoute) {
+  constructor(private getJoke: RandomJokeService, private route: ActivatedRoute) {
   }
 
   ngOnInit() {
-    this.joke.getRandomJoke().subscribe(
-      (result) => {
+    this.getJoke.getRandomJoke().subscribe(
+      (result ) => {
         this.jokeUrl = result.message;
-        console.log(result);
+        console.log(result.message);
       }
     );
   }

@@ -13,7 +13,7 @@ export class CounterComponent {
   constructor() {
     this.counter = 0;
   }
-
+// button clicked counter increase/decrease by one and the counter will be set as a string in output which will be displayed by the browser
   decreaseCounter() {
     this.counter--;
     this.counterChange.emit();

@@ -4,15 +4,19 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'asterixPipe'
 })
 export class AsterixPipePipe implements PipeTransform {
-  x = '*';
+  x = '';
+  y = 0;
   transform(counter: number): any {
-    if (counter < 5) {
-      return '';
-    } else if (counter === 5) {
-      return this.x;
-    } else if (counter % 5 === 0) {
-        this.x = this.x + '*';
+    // if the number is divisble by 5 then add an asterix
+     if (counter % 5 === 0) {
+        this.y = counter / 5;
+        this.x = '';
+        while (this.y > 0) {
+          this.x = this.x + '*';
+          this.y--;
+        }
         return this.x;
+        // if its not divisble by 5 then keep showing the previous asterixs
       } else {
         return this.x;
       }
