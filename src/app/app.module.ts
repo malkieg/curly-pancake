@@ -7,9 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainComponent } from './views/main/main.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './views/home/home.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
 import { CounterComponent } from './views/counter/counter.component';
+import { RandomJokeComponent } from './views/random-joke/random-joke.component';
+import { AsterixPipePipe } from './models/asterix-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,9 @@ import { CounterComponent } from './views/counter/counter.component';
     MainComponent,
     HomeComponent,
     NotFoundComponent,
-    CounterComponent
+    CounterComponent,
+    RandomJokeComponent,
+    AsterixPipePipe
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,8 @@ import { CounterComponent } from './views/counter/counter.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

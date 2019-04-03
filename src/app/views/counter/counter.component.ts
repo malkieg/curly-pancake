@@ -17,6 +17,8 @@ export class CounterComponent {
   decreaseCounter() {
     this.counter--;
     this.counterChange.emit();
+    // how to convert a number into a string
+    // https://stackoverflow.com/questions/32554624/casting-a-number-to-a-string-in-typescript
     this.output = String(this.counter);
   }
 

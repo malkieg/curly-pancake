@@ -3,10 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
 import { CounterComponent } from './views/counter/counter.component';
+import {RandomJokeComponent} from './views/random-joke/random-joke.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'counter', component: CounterComponent},
+  {path: 'randomJoke', component: RandomJokeComponent},
   {path: '**', pathMatch: 'full', component: NotFoundComponent}
 ];
 
